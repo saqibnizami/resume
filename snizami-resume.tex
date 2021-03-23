@@ -1,0 +1,233 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{snizami-resume}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
+\usepackage{academicons}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{SAQIB}{NIZAMI}{
+\urlstyle{same}
+\href{https://snizami.com}{\faLink \space snizami.com} |
+\href{mailto:snizami@gmail.com}{\faEnvelope \space snizami@gmail.com} | 
+\faPhone \space 646 236 8570 | \faGlobe \space {New York, NY}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.26\textwidth} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+
+\subsection{Programming}
+% \location{Over 5000 lines:}
+Python\textbullet{}PySpark\textbullet{}SQL\textbullet{}\\
+JavaScript(Node.js, Sequelize)\textbullet{}\\
+R\textbullet{}Shell\textbullet{}\LaTeX
+\sectionsep
+
+\subsection{Infra + DevOps}
+AWS\textbullet{}GCP\textbullet{}Aptible\textbullet{}\\
+Docker\textbullet{}CloudFormation\textbullet{}\\
+Terraform\textbullet{}Github Actions
+\sectionsep
+
+\subsection{Data Engineering}
+PostgreSQL\textbullet{}Snowflake\textbullet{}dbt\textbullet{}\\
+redis\textbullet{}Airflow\textbullet{}GraphQL\textbullet{}\\ 
+AWS: Lambda, Kinesis, EKS\textbullet{}\\
+REST API\textbullet{}ETL System Design
+\sectionsep
+
+\subsection{Data Science}
+Pandas\textbullet{}Jupyter\textbullet{}Numpy\textbullet{}\\
+Scikit-Learn\textbullet{}Tensorflow\textbullet{}\\
+Keras\textbullet{}nltk\textbullet{}spaCy\textbullet{}\\
+statsmodels\textbullet{}imbalanced-learn
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+
+\href{https://github.com/saqibnizami}{\faGithub: \bf saqibnizami} \\
+\href{https://www.linkedin.com/in/saqibnizami}{\faLinkedin: \bf saqibnizami} \\
+\href{https://www.researchgate.net/profile/Saqib-Nizami/publications}{\aiResearchGateSquare: \bf Publications}
+\sectionsep
+
+\section{Projects}
+
+\subsection{Interpretable \\
+Breast Cancer \\
+Classification \\
+using Custom CNN}
+\descript{Capstone. Data Science Immersive}
+\location{Apr 2018 - Jul 2018}
+% \vspace{\topsep} 
+% \begin{tightemize}
+Developed custom Convolutional Neural Network in TensorFlow based on breast cancer cells. Augmented histology image dataset using GPU-enabled GCE and AWS instances. Investigated model interpretability using LIME.
+% \end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{General Assembly}
+\descript{Data Science Immersive Certification}
+% \descript{Data Science Immersive}
+\location{New York, NY}
+\sectionsep
+
+\subsection{R.I.T.}
+% \descript{Rochester Institute of Technology}
+\descript{BS, Biomedical Science}
+\location{Rochester, NY}
+College of Science \\
+Presidential Merit Scholar\\
+\sectionsep
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.72\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{ZipDrug (acq. Anthem, Inc.)}
+\descript{| Engineer III, Data Team Lead}
+\location{Oct 2019 - Present | Jersey City, NJ}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Maintained legacy PySpark ETL, PostgreSQL RDS, Python codebase, and Looker (lookml) code.
+\item Expanded Data Engineering and Reporting team by hiring and mentoring engineers and analysts.
+\item Architected and implemented new scalable solutions to replace legacy code and infrastructure. Utilized Airflow and AWS Elastic Kubernetes Service to orchestrate PySpark ETL and downstream Python/JavaScript data processes.
+\item Implemented two business program expansions that resulted in tripling of data volume to several hundred-thousand patients and millions of claims.
+\item Spearheaded Snowflake data warehouse using dbt to build Data Marts. Developed the POC and led Data Warehouse team in Production-level warehousing efforts.
+\item Created internal reporting dashboards for business teams, investor and executive-level reports, and client-facing reports on program performance.
+\item Worked on Digital Integration with Anthem's Sydney HealthCare app. Deployed architecture to enable file transfers between Anthem-IngenioRX and Zipdrug teams. Designed and implemented backend application to provide Zipdrug enrollment and status information to Kinesis Data Stream using asynchronous python producer/consumer pattern.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{General Assembly}
+\descript{| Python Instructional Associate }
+\location{Sep 2019 - Dec 2019 | New York, NY}
+\begin{tightemize}
+\item Evening Python Programming Class instructor. Taught basic Python Programming (Data Structures, Working with APIs, Analysis with pandas).
+\end{tightemize}
+\location{Oct 2018 and Jun 2019 | New York, NY}
+\begin{tightemize}
+\item Taught Python Data Analysis (Basic Data Structures, pandas, matplotlib/seaborn) to an enterprise client: UTC dX.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{uBiome}
+\descript{| Data Scientist, Analytics }
+\location{Oct 2018 – Jul 2019 | New York, NY}
+\begin{tightemize}
+\item Developed a statistically balanced Random Forest classification model. Created an API to serve model outputs in production.
+\item Designed and deployed internal python-based dashboarding platform for Data Analytics Team.
+\item Used Latent Dirichlet Allocation on customer NPS feedback to identify pain
+points in the customer journey. Wrote ETL to obtain data from Wootric API.
+\item Implemented dockerized workflow for the Analytics Team.
+\item Created ETL for Google Ads and Facebook Ads and maintained analytics team PostgreSQL DB.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Memorial Sloan Kettering Cancer Center}
+\descript{| Sr. Research Associate}
+\location{Sep 2017 - Jan 2018 | New York, NY}
+\begin{tightemize}
+\item Utilized R and Bioconductor to analyze RNA Sequencing data from tumor cell biopsies
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Columbia University Medical Center}
+\descript{| Sr. Research Technician}
+\location{Jul 2010 - Jul 2017 | New York, NY}
+\begin{tightemize}
+\item Established quantifiable functional osteoclast imaging \textit{in vivo} using fluorescent signal analysis. Work published in \textit{Cell} and \textit{Journal of Biophotonics}.
+\item Conducted and analyzed \textit{in vivo} and \textit{in vitro} dose response/kinetic release curve experiments for novel cancer therapeutic delivery mechanisms.
+\end{tightemize}
+\sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
